@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Booking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="booking-container">
+        <div class="booking-header">
+            <h1>Book Your Appointment</h1>
+            <p>Experience premium service with us</p>
+        </div>
+        
+        <form action="https://formsubmit.co/YOUR_ACTUAL_EMAIL@EMAIL.COM" method="POST" id="booking-form">
+            
+            <input type="hidden" name="_next" value="https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date"><i class="fas fa-calendar-alt"></i> Select Date</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time"><i class="fas fa-clock"></i> Select Time</label>
+                <input type="time" name="time" id="time" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Confirm Booking</button>
+        </form>
+    </div>
+</body>
+</html>
