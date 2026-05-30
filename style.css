@@ -1,4 +1,4 @@
-/* @import की मदद से गूगल का प्रीमियम फॉन्ट लोड कर रहे हैं */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -9,7 +9,6 @@
 }
 
 body {
-    /* एक डीप और प्रीमियम डार्क ग्रेडिएंट बैकग्राउंड */
     background: radial-gradient(circle at top right, #1e1b4b, #0f172a 60%);
     display: flex;
     justify-content: center;
@@ -20,24 +19,22 @@ body {
     padding: 20px;
 }
 
-/* प्रीमियम ग्लास कार्ड डिजाइन */
 .booking-container {
     background: rgba(15, 23, 42, 0.65);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 45px 40px;
+    padding: 40px 35px;
     border-radius: 24px;
     width: 100%;
     max-width: 480px;
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8),
-                0 0 50px -10px rgba(99, 102, 241, 0.15); /* हल्का सा नियॉन ग्लो */
+    box-shadow: 0 30px 60px -15 rgba(0, 0, 0, 0.8),
+                0 0 50px -10px rgba(99, 102, 241, 0.15);
 }
 
-/* हेडर सेक्शन */
 .booking-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .booking-header h1 {
@@ -45,7 +42,6 @@ body {
     font-weight: 700;
     letter-spacing: -0.5px;
     margin-bottom: 10px;
-    /* टेक्स्ट में प्रीमियम ग्रेडिएंट कलर */
     background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -54,18 +50,15 @@ body {
 .booking-header p {
     color: #94a3b8;
     font-size: 15px;
-    font-weight: 400;
 }
 
-/* फॉर्म और इनपुट ग्रुप्स */
 .form-group {
-    margin-bottom: 24px;
-    position: relative;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     color: #cbd5e1;
     font-size: 14px;
     font-weight: 500;
@@ -73,10 +66,9 @@ body {
 
 .form-group label i {
     margin-right: 6px;
-    color: #38bdf8; /* आइकन्स का प्रीमियम स्काई ब्लू कलर */
+    color: #38bdf8;
 }
 
-/* इनपुट बॉक्स की अल्ट्रा-क्वालिटी स्टाइलिंग */
 .form-group input {
     width: 100%;
     padding: 14px 18px;
@@ -85,64 +77,123 @@ body {
     border-radius: 12px;
     color: #ffffff;
     font-size: 15px;
-    font-weight: 400;
     outline: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
-/* कैलेंडर और टाइम वाले इनपुट के आइकॉन का कलर डार्क मोड के लिए सेट करना */
 .form-group input[type="date"]::-webkit-calendar-picker-indicator,
 .form-group input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg); /* सुंदर ब्लू कलर का कैलेंडर आइकॉन */
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
     cursor: pointer;
 }
 
-/* इनपुट पर क्लिक (Focus) करने का स्मूथ एनीमेशन */
 .form-group input:focus {
     background: rgba(30, 41, 59, 0.8);
     border-color: #6366f1;
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15),
-                0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
 
-/* बटन की एकदम धांसू स्टाइलिंग */
 .submit-btn {
     width: 100%;
     padding: 16px;
-    margin-top: 12px;
     border: none;
     border-radius: 12px;
     background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: 0.5px;
     cursor: pointer;
     box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
-/* बटन पर माउस ले जाने (Hover) का इफेक्ट */
 .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 30px -5px rgba(6, 182, 212, 0.5);
     filter: brightness(1.1);
 }
 
-/* बटन दबाने पर (Active) हल्का सा नीचे दबेगा */
-.submit-btn:active {
+/* --- नया जोड़ा गया स्टाइल (OR Divider, Contact & WhatsApp) --- */
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.or-divider::before, .or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.or-divider:not(:empty)::before { margin-right: .5em; }
+.or-divider:not(:empty)::after { margin-left: .5em; }
+
+.contact-info {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item i {
+    color: #818cf8;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* अल्ट्रा प्रीमियम व्हाट्सएप बटन */
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.5);
+    filter: brightness(1.1);
+}
+
+.whatsapp-btn:active {
     transform: translateY(1px);
 }
 
-/* रिस्पॉन्सिव डिजाइन (ताकि मोबाइल पर भी धाकड़ दिखे) */
 @media (max-width: 480px) {
     .booking-container {
-        padding: 35px 24px;
-        border-radius: 20px;
+        padding: 30px 20px;
     }
-    
-    .booking-header h1 {
-        font-size: 26px;
     }
-  }
 
